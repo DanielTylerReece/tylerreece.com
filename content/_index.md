@@ -10,5 +10,6 @@ signals:
   - C · Go · Python
   - CLI-first · self-hosted
 chip: "~/tylerreece · on the road"
+heroImage: /img/hero.jpg
 currently: "building Chirp & Satwave, studying for Azure AZ-104."
 ---

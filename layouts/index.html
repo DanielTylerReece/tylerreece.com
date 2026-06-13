@@ -15,10 +15,17 @@
       </div>
     </div>
     <div class="sw-figure">
+      {{ with .Params.heroImage }}
+      <div class="sw-tile has-photo">
+        <img src="{{ . | relURL }}" alt="Tyler in front of a network rack" />
+        <span class="sw-chip">{{ $.Params.chip }}</span>
+      </div>
+      {{ else }}
       <div class="sw-tile">
         <span class="sw-mono">{{ site.Params.monogram }}</span>
         <span class="sw-chip">{{ .Params.chip }}</span>
       </div>
+      {{ end }}
     </div>
   </section>
 
