@@ -2,7 +2,11 @@
 <div class="page clamp">
   {{ partial "page-head.html" . }}
   <div class="about-grid">
+    {{ with .Params.portrait }}
+    <img class="about-portrait" src="{{ . | relURL }}" alt="Tyler in front of a freshly cabled network rack" />
+    {{ else }}
     <div class="about-portrait placeholder">portrait</div>
+    {{ end }}
     <div class="prose about-body">{{ .Content }}</div>
   </div>
 </div>
