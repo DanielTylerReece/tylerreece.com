@@ -414,8 +414,8 @@ img.about-portrait { width: 100%; object-fit: cover; box-shadow: var(--card-shad
 .banner-home { margin-top: 34px; }
 
 @media (max-width: 900px) {
-  .sw-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 56px; }
-  .sw-figure { max-width: 320px; }
+  .sw-hero { grid-template-columns: 1fr; gap: 32px; padding-top: 56px; }
+  .sw-figure { order: -1; max-width: 320px; margin-inline: auto; width: 100%; }
   .sw-figure .sw-mono { font-size: 120px; }
   .detail-grid { grid-template-columns: 1fr; }
   .detail-side { position: static; }
