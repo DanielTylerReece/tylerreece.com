@@ -1,7 +1,9 @@
 {{- /* Project card. Context: one entry from data/projects.yaml. */ -}}
 <a class="card project-card" href="{{ printf "/projects/%s/" .slug | relURL }}">
-  {{ with .image }}
-  <img class="pc-shot" src="{{ . | relURL }}" alt="{{ $.name }} screenshot" />
+  {{ if .image }}
+  <img class="pc-shot" src="{{ .image | relURL }}" alt="{{ .name }} screenshot" />
+  {{ else if .logo }}
+  <div class="pc-shot logo-tile"><img src="{{ .logo | relURL }}" alt="{{ .name }} logo" /></div>
   {{ else }}
   <div class="pc-shot placeholder">{{ .name }} screenshot</div>
   {{ end }}

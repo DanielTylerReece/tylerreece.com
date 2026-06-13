@@ -8,8 +8,10 @@
     <h1>{{ $p.name }}</h1>
     <div class="detail-meta">{{ partial "lang-pill.html" $p.language }}<span class="detail-sum">{{ $p.summary }}</span></div>
   </div>
-  {{ with $p.image }}
-  <img class="detail-shot" src="{{ . | relURL }}" alt="{{ $p.name }} — app screenshot" />
+  {{ if $p.image }}
+  <img class="detail-shot" src="{{ $p.image | relURL }}" alt="{{ $p.name }} — app screenshot" />
+  {{ else if $p.logo }}
+  <div class="detail-shot logo-tile"><img src="{{ $p.logo | relURL }}" alt="{{ $p.name }} logo" /></div>
   {{ else }}
   <div class="detail-shot placeholder">{{ $p.name }} — app screenshot</div>
   {{ end }}

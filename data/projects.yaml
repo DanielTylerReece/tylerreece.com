@@ -21,7 +21,7 @@
   featured: true
   weight: 1
   image: ""
-  logo: ""
+  logo: /img/projects/chirp-logo.svg
 - name: Satwave
   slug: satwave
   language: C
@@ -42,8 +42,8 @@
   demo: ""
   featured: true
   weight: 2
-  image: ""
-  logo: ""
+  image: /img/projects/satwave.png
+  logo: /img/projects/satwave-logo.svg
 - name: Timbre
   slug: timbre
   language: Python
@@ -59,8 +59,8 @@
   demo: ""
   featured: true
   weight: 3
-  image: ""
-  logo: ""
+  image: /img/projects/timbre.png
+  logo: /img/projects/timbre-logo.svg
 - name: Mail-Triage
   slug: mail-triage
   language: Python
@@ -81,7 +81,7 @@
   featured: false
   weight: 4
   image: ""
-  logo: ""
+  logo: /img/projects/mail-triage-logo.svg
 - name: Docket
   slug: docket
   language: JavaScript
@@ -99,5 +99,5 @@
   demo: ""
   featured: false
   weight: 5
-  image: ""
-  logo: ""
+  image: /img/projects/docket.png
+  logo: /img/projects/docket-logo.svg
