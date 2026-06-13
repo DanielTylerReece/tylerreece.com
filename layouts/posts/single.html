@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="page clamp">
+  <a class="back-link" href="{{ "/posts/" | relURL }}">{{ partial "icon.html" (dict "name" "chevron" "class" "back-ico") }}Blog</a>
+  <article class="post-single">
+    <div class="post-meta mono">{{ .Date.Format "Jan 2, 2006" }} · {{ .Params.readingTime }}</div>
+    <h1 class="post-h1">{{ .Title }}</h1>
+    <div class="post-tags">{{ partial "tags.html" .Params.tags }}</div>
+    <div class="prose">{{ .Content }}</div>
+  </article>
+</div>
+{{ end }}

@@ -1,0 +1,66 @@
+baseURL = "https://tylerreece.com/"
+locale = "en-US"
+title = "Tyler Reece"
+disableKinds = ["taxonomy", "term"]
+enableEmoji = false
+
+[params]
+  monogram = "TR"
+  role = "System Administrator & Linux desktop developer"
+  oneLiner = "Builds native GNOME/Linux desktop apps and self-hosted sysadmin tooling."
+  email = "tyler@tylerreece.com"
+  github = "https://github.com/DanielTylerReece"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+  [menu.main.params]
+    icon = "home"
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 2
+  [menu.main.params]
+    icon = "folder"
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
+  [menu.main.params]
+    icon = "person"
+
+[[menu.main]]
+  name = "Certs"
+  url = "/certifications/"
+  weight = 4
+  [menu.main.params]
+    icon = "ribbon"
+
+[[menu.main]]
+  name = "Uses"
+  url = "/uses/"
+  weight = 5
+  [menu.main.params]
+    icon = "sliders"
+
+[[menu.main]]
+  name = "Now"
+  url = "/now/"
+  weight = 6
+  [menu.main.params]
+    icon = "clock"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 7
+  [menu.main.params]
+    icon = "doc"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    noClasses = false

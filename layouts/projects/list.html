@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="page clamp-wide">
+  {{ partial "page-head.html" . }}
+  <div class="projects-grid">
+    {{ range sort hugo.Data.projects "weight" }}
+    {{ partial "project-card.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

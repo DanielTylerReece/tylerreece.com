@@ -1,0 +1,9 @@
+- {group: CompTIA, issuer: CompTIA, abbrev: "A+",    name: CompTIA A+}
+- {group: CompTIA, issuer: CompTIA, abbrev: "NET+",  name: CompTIA Network+}
+- {group: CompTIA, issuer: CompTIA, abbrev: "SEC+",  name: CompTIA Security+}
+- {group: CompTIA, issuer: CompTIA, abbrev: "PROJ+", name: CompTIA Project+}
+- {group: CompTIA, issuer: CompTIA, abbrev: "ITF+",  name: CompTIA ITF+, fullname: IT Fundamentals+}
+- {group: CompTIA, issuer: CompTIA, abbrev: "CIOS",  name: CompTIA CIOS, fullname: "IT Operations Specialist — stackable"}
+- {group: CompTIA, issuer: CompTIA, abbrev: "CSIS",  name: CompTIA CSIS, fullname: "Secure Infrastructure Specialist — stackable"}
+- {group: Microsoft, issuer: Microsoft, abbrev: "AZ-900", name: Azure Fundamentals, fullname: "Microsoft Certified: AZ-900"}
+- {group: "Compliance / Security", issuer: CJIS, abbrev: "CJIS", name: CJIS Security Awareness, fullname: Criminal Justice Information Services}

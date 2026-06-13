@@ -1,0 +1,4 @@
+{{- /* Language pill with colored dot. Context: language string. */ -}}
+{{- $lang := . -}}
+{{- $color := index hugo.Data.languages $lang -}}
+<span class="lang-pill">{{ with $color }}<span class="lang-dot" style="background:{{ . | safeCSS }}"></span>{{ end }}{{ $lang }}</span>

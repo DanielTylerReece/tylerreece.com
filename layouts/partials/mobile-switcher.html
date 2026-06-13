@@ -1,0 +1,5 @@
+<nav class="mobile-switcher" aria-label="Sections">
+  {{ range site.Menus.main }}
+  <a href="{{ .URL | relURL }}"{{ if partial "nav-active.html" (dict "page" $ "item" .) }} class="active" aria-current="page"{{ end }}>{{ partial "icon.html" (dict "name" .Params.icon) }}<span>{{ .Name }}</span></a>
+  {{ end }}
+</nav>

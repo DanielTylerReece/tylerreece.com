@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="page clamp">
+  {{ partial "page-head.html" . }}
+  <div class="boxed-list">
+    {{ range .Pages }}
+    <a class="row clickable" href="{{ .RelPermalink }}">
+      <div class="row-text"><div class="row-title">{{ .Title }}</div></div>
+      <div class="row-end">{{ partial "icon.html" (dict "name" "chevron" "class" "row-chevron") }}</div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

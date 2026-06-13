@@ -1,0 +1,7 @@
+{{- /* Emits "active" when a main-menu item matches the current page, else "".
+     Usage: partial "nav-active.html" (dict "page" $page "item" $menuItem) */ -}}
+{{- $cur := .page.RelPermalink -}}
+{{- $url := .item.URL -}}
+{{- if eq $url "/" -}}{{- if eq $cur "/" }}active{{ end -}}
+{{- else -}}{{- if hasPrefix $cur $url }}active{{ end -}}
+{{- end -}}

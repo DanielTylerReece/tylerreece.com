@@ -1,0 +1,16 @@
+<header class="headerbar" id="hb">
+  <a class="hb-brand" href="{{ "/" | relURL }}">
+    <span class="monogram mono-mini">{{ site.Params.monogram }}</span>
+    <span>{{ site.Title }}</span>
+  </a>
+  <div class="hb-spacer"></div>
+  <nav class="hb-nav" aria-label="Primary">
+    {{ range site.Menus.main }}
+    <a href="{{ .URL | relURL }}"{{ if partial "nav-active.html" (dict "page" $ "item" .) }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+  </nav>
+  <div class="hb-spacer"></div>
+  <div class="hb-end">
+    <a class="btn pill suggested" href="{{ site.Params.github }}" target="_blank" rel="noopener">View on GitHub</a>
+  </div>
+</header>

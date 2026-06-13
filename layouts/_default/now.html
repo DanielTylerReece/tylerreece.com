@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="page clamp">
+  {{ partial "page-head.html" . }}
+  <div class="now-updated mono">Last updated · {{ .Params.updated }}</div>
+  {{ $rows := slice }}
+  {{ range .Params.items }}
+  {{ $rows = $rows | append (dict "badge" .label "title" .text) }}
+  {{ end }}
+  {{ partial "boxed-list.html" (dict "rows" $rows "class" "now-list") }}
+  <p class="now-note">{{ .Params.note }}</p>
+</div>
+{{ end }}

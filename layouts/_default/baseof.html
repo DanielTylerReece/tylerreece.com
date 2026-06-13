@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Params.lede }}{{ . }}{{ else }}{{ site.Params.oneLiner }}{{ end }}" />
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+{{ $css := resources.Get "css/adwaita.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+</head>
+<body>
+{{ partial "headerbar.html" . }}
+{{ partial "mobile-switcher.html" . }}
+<main id="content">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+<script src="{{ "js/site.js" | relURL }}" defer></script>
+</body>
+</html>

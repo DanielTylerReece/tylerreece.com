@@ -1,0 +1,16 @@
+{{- /* Project card. Context: one entry from data/projects.yaml. */ -}}
+<a class="card project-card" href="{{ printf "/projects/%s/" .slug | relURL }}">
+  {{ with .image }}
+  <img class="pc-shot" src="{{ . | relURL }}" alt="{{ $.name }} screenshot" />
+  {{ else }}
+  <div class="pc-shot placeholder">{{ .name }} screenshot</div>
+  {{ end }}
+  <div class="pc-body">
+    <div class="pc-head"><h3>{{ .name }}</h3>{{ partial "lang-pill.html" .language }}</div>
+    <p class="pc-sum">{{ .summary }}</p>
+    {{ partial "tags.html" (first 4 .tags) }}
+    <div class="pc-actions">
+      <span class="btn flat pc-details">Details {{ partial "icon.html" (dict "name" "chevron") }}</span>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="page clamp">
+  {{ partial "page-head.html" . }}
+  {{ range .Params.sections }}
+  <div class="boxed-group">
+    <div class="group-title">{{ .group }}</div>
+    {{ $rows := slice }}
+    {{ range .items }}
+    {{ $rows = $rows | append (dict "title" .name "sub" .detail) }}
+    {{ end }}
+    {{ partial "boxed-list.html" (dict "rows" $rows) }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

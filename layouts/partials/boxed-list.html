@@ -1,0 +1,13 @@
+{{- /* Adwaita boxed list. Context: dict with "rows" (slice of dicts with
+     optional badge, title, optional sub) and optional "class". */ -}}
+<div class="boxed-list{{ with .class }} {{ . }}{{ end }}">
+  {{ range .rows }}
+  <div class="row">
+    {{ with .badge }}<div class="row-badge">{{ . }}</div>{{ end }}
+    <div class="row-text">
+      <div class="row-title">{{ .title }}</div>
+      {{ with .sub }}<div class="row-sub">{{ . }}</div>{{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>

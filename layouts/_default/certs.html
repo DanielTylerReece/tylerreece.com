@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="page clamp">
+  {{ partial "page-head.html" . }}
+  {{ range $group := .Params.groupOrder }}
+  {{ $certs := where hugo.Data.certs "group" $group }}
+  {{ if $certs }}
+  <div class="boxed-group">
+    <div class="group-title">{{ $group }}</div>
+    {{ $rows := slice }}
+    {{ range $certs }}
+    {{ $rows = $rows | append (dict "badge" .abbrev "title" .name "sub" (.fullname | default "")) }}
+    {{ end }}
+    {{ partial "boxed-list.html" (dict "rows" $rows) }}
+  </div>
+  {{ end }}
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ $slug := .File.ContentBaseName }}
+{{ $p := index (where hugo.Data.projects "slug" $slug) 0 }}
+{{ if not $p }}{{ errorf "No entry in data/projects.yaml with slug %q" $slug }}{{ end }}
+<div class="page clamp">
+  <a class="back-link" href="{{ "/projects/" | relURL }}">{{ partial "icon.html" (dict "name" "chevron" "class" "back-ico") }}Projects</a>
+  <div class="detail-head">
+    <h1>{{ $p.name }}</h1>
+    <div class="detail-meta">{{ partial "lang-pill.html" $p.language }}<span class="detail-sum">{{ $p.summary }}</span></div>
+  </div>
+  {{ with $p.image }}
+  <img class="detail-shot" src="{{ . | relURL }}" alt="{{ $p.name }} — app screenshot" />
+  {{ else }}
+  <div class="detail-shot placeholder">{{ $p.name }} — app screenshot</div>
+  {{ end }}
+  <div class="detail-grid">
+    <div class="detail-main">
+      <p class="detail-desc">{{ $p.description }}</p>
+      {{ with $p.features }}
+      <h3 class="detail-h">Features</h3>
+      <ul class="feature-list">
+        {{ range . }}
+        <li>{{ partial "icon.html" (dict "name" "chevron" "class" "feat-ico") }}<span>{{ . }}</span></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    <aside class="detail-side">
+      <div class="boxed-list side-box">
+        <div class="row">
+          <div class="row-text">
+            <div class="row-sub">Language</div>
+            <div class="row-title">{{ $p.language }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row-text">
+            <div class="row-sub">Tech stack</div>
+            <div class="row-title" style="margin-top:6px">{{ partial "tags.html" $p.tags }}</div>
+          </div>
+        </div>
+      </div>
+      <a class="btn suggested pill detail-repo" href="{{ $p.repo }}" target="_blank" rel="noopener">{{ partial "icon.html" (dict "name" "github") }}View on GitHub</a>
+    </aside>
+  </div>
+</div>
+{{ end }}

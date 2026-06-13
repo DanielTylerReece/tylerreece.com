@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="page clamp">
+  {{ partial "page-head.html" . }}
+  <div class="about-grid">
+    <div class="about-portrait placeholder">portrait</div>
+    <div class="prose about-body">{{ .Content }}</div>
+  </div>
+</div>
+{{ end }}

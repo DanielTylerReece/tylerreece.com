@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="page clamp">
+  {{ partial "page-head.html" . }}
+  <div class="post-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <a class="card post-card" href="{{ .RelPermalink }}">
+      <div class="post-meta mono">{{ .Date.Format "Jan 2, 2006" }} · {{ .Params.readingTime }}</div>
+      <h3 class="post-title">{{ .Title }}</h3>
+      <p class="post-excerpt">{{ .Params.excerpt }}</p>
+      {{ partial "tags.html" .Params.tags }}
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

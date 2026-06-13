@@ -1,0 +1,103 @@
+- name: Chirp
+  slug: chirp
+  language: Go
+  summary: Native GTK4/libadwaita Google Messages client for GNOME Linux.
+  description: >
+    Chirp is a fully native Google Messages desktop client for GNOME. Pair it with
+    your phone via a QR code and your texts arrive on the desktop with iMessage-style
+    chat bubbles, inline media, dual-SIM selection, and real-time delivery. A local
+    SQLite cache means the whole conversation history is ready the instant you open
+    the app — no spinner, no browser, no Electron.
+  features:
+    - Pair with your phone over a QR code
+    - iMessage-style chat bubbles & inline media
+    - Dual-SIM selection
+    - Real-time message delivery
+    - Local SQLite cache for instant startup
+    - Zero Electron, zero embedded browser
+  tags: [GTK4, libadwaita, Go, GNOME, SQLite]
+  repo: https://github.com/DanielTylerReece/Chirp
+  demo: ""
+  featured: true
+  weight: 1
+  image: ""
+  logo: ""
+- name: Satwave
+  slug: satwave
+  language: C
+  summary: Native GNOME desktop client for SiriusXM satellite radio.
+  description: >
+    Satwave brings SiriusXM to the Linux desktop as a proper native app. Browse the
+    channel lineup, play live streams, and watch now-playing metadata scroll across a
+    retro LCD-style display. Written in C with GTK4, libadwaita, and GStreamer for the
+    audio pipeline. Requires a paid SiriusXM subscription.
+  features:
+    - Browse the full channel lineup
+    - Play live satellite streams
+    - Retro LCD now-playing display
+    - GStreamer audio pipeline
+    - Requires a paid SiriusXM subscription
+  tags: [C, GTK4, libadwaita, GStreamer, GNOME]
+  repo: https://github.com/DanielTylerReece/Satwave
+  demo: ""
+  featured: true
+  weight: 2
+  image: ""
+  logo: ""
+- name: Timbre
+  slug: timbre
+  language: Python
+  summary: "Your Sound, Deep Roots. A Jellyfin music client."
+  description: >
+    Timbre is a music client for Jellyfin — a clean, focused way to play your
+    self-hosted library from the desktop. "Your Sound, Deep Roots."
+  features:
+    - Connects to your Jellyfin server
+    - Focused, library-first music playback
+  tags: [Python, Jellyfin, music]
+  repo: https://github.com/DanielTylerReece/Timbre
+  demo: ""
+  featured: true
+  weight: 3
+  image: ""
+  logo: ""
+- name: Mail-Triage
+  slug: mail-triage
+  language: Python
+  summary: Self-hosted gray-mail killer for Microsoft 365.
+  description: >
+    Mail-Triage is a self-hosted service that clears the low-value "gray mail" out of
+    Microsoft 365 mailboxes automatically. It handles multiple mailboxes from a single
+    plain-text config file and keeps an audit log of every action it takes, so nothing
+    happens to your inbox without a trail.
+  features:
+    - Multi-mailbox from one config
+    - Plain-text configuration
+    - Full audit log of every action
+    - Self-hosted — you own the data
+  tags: [Python, Microsoft 365, self-hosted, automation]
+  repo: https://github.com/DanielTylerReece/Mail-Triage
+  demo: ""
+  featured: false
+  weight: 4
+  image: ""
+  logo: ""
+- name: Docket
+  slug: docket
+  language: JavaScript
+  summary: "GNOME Shell extension: your tasks next to the calendar."
+  description: >
+    Docket is a GNOME Shell extension that surfaces your Microsoft To Do and Todoist
+    tasks right next to the calendar in the date menu — so the things you need to do
+    live next to the day they're due, without opening another app.
+  features:
+    - Microsoft To Do integration
+    - Todoist integration
+    - Tasks shown in the date-menu calendar popover
+  tags: [JavaScript, GNOME Shell extension, GJS]
+  repo: https://github.com/DanielTylerReece/Docket
+  demo: ""
+  featured: false
+  weight: 5
+  image: ""
+  logo: ""

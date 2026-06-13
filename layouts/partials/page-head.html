@@ -1,0 +1,6 @@
+{{- /* Page heading block. Context: the page (uses eyebrow/heading/lede params). */ -}}
+<div class="page-head">
+  <div class="eyebrow">{{ .Params.eyebrow }}</div>
+  <h1>{{ with .Params.heading }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
+  {{ with .Params.lede }}<p class="lede">{{ . }}</p>{{ end }}
+</div>

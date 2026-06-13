@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="page home">
+  <section class="sw-hero clamp-wide">
+    <div class="sw-text">
+      <div class="sw-eyebrow">{{ .Params.eyebrow }}</div>
+      <h1>{{ .Params.headline | safeHTML }}</h1>
+      <p class="sw-bio">{{ .Params.bio }}</p>
+      <div class="sw-signals">
+        {{ range .Params.signals }}<span class="sig">{{ . }}</span>{{ end }}
+      </div>
+      <div class="sw-cta">
+        <a class="btn suggested pill" href="{{ "/projects/" | relURL }}">{{ partial "icon.html" (dict "name" "folder") }}View projects</a>
+        <a class="btn pill" href="{{ "/about/" | relURL }}">{{ partial "icon.html" (dict "name" "person") }}More about me</a>
+        <a class="btn pill" href="{{ site.Params.github }}" target="_blank" rel="noopener">{{ partial "icon.html" (dict "name" "github") }}GitHub</a>
+      </div>
+    </div>
+    <div class="sw-figure">
+      <div class="sw-tile">
+        <span class="sw-mono">{{ site.Params.monogram }}</span>
+        <span class="sw-chip">{{ .Params.chip }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-featured clamp-wide">
+    <div class="section-bar">
+      <h2>Featured projects</h2>
+      <a class="btn flat" href="{{ "/projects/" | relURL }}">All projects {{ partial "icon.html" (dict "name" "chevron") }}</a>
+    </div>
+    <div class="projects-grid">
+      {{ range sort (where hugo.Data.projects "featured" true) "weight" }}
+      {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="clamp banner-home">
+    <a class="banner" href="{{ "/now/" | relURL }}">
+      <span class="banner-dot"></span>
+      <span class="banner-text"><strong>Currently:</strong> {{ .Params.currently }}</span>
+      <span class="btn flat">See the Now page {{ partial "icon.html" (dict "name" "chevron") }}</span>
+    </a>
+  </section>
+</div>
+{{ end }}

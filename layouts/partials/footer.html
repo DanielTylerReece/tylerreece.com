@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <div class="clamp-wide foot-inner">
+    <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    <a href="{{ site.Params.github }}" target="_blank" rel="noopener">{{ replace site.Params.github "https://" "" }}</a>
+    <span class="foot-spacer"></span>
+    <span>© {{ now.Year }} {{ site.Title }}</span>
+  </div>
+</footer>
